@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="form-group">
+    <h4>Edit page number {{pageToEdit.id}}</h4>
+  </div>
+
+  <div class="form-group">
+    <label for="pageTitle">Page title:</label>
+    <input type="text" class="form-control" id="pageTitle" [(ngModel)]="pageToEdit.title">
+  </div>
+
+  <div class="form-group">
+    <label for="pageSubTitle">Page sub-title:</label>
+    <input type="text" class="form-control" id="pageSubTitle" [(ngModel)]="pageToEdit.subTitle">
+  </div>
+
+  <div class="form-group">
+    <label for="pageContent">Page content:</label>
+    <input type="text" class="form-control" id="pageContent" [(ngModel)]="pageToEdit.content">
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="edit(pageToEdit.title, pageToEdit.subTitle, pageToEdit.content)">Edit</button>
+</div>

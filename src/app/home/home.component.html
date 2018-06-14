@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-8">
+    <div class="container">
+      <div class="card bg-light text-dark">
+        <div class="card-header">
+          <h3 *ngIf="!pageObj">Click on a page to see the content.</h3>
+          <div *ngIf="pageObj">
+            <button type="button" class="btn btn-info" (click)="edit(pageObj.id)"><i class="fa fa-edit"></i></button>
+            <h3> {{pageObj.title}}</h3>
+            <h6>{{pageObj.subTitle}}</h6>
+          </div>
+        </div>
+        <div class="card-body bg-white" *ngIf="pageObj">
+          {{pageObj.content}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <app-sidemenu (outputToParent)="getOutputVal($event)"></app-sidemenu>
+  </div>
+</div>
+

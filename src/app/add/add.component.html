@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label for="pageId">Page Id:</label>
+      <input type="number" formControlName="id" class="form-control" name="id" id="pageId">
+    </div>
+
+    <div class="form-group">
+      <label for="pageTitle">Page title:</label>
+      <input type="text" class="form-control" formControlName="title" id="pageTitle">
+    </div>
+
+    <div class="form-group">
+      <label for="pageSubTitle">Page sub-title:</label>
+      <input type="text" class="form-control" formControlName="subTitle" id="pageSubTitle">
+    </div>
+
+    <div class="form-group">
+      <label for="pageContent">Page content:</label>
+      <input type="text" class="form-control" id="pageContent" formControlName="content">
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="add(form)">Add</button>
+  </form>
+</div>
+
+
+
